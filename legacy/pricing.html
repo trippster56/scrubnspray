@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Scrub N Spray Car Wash</title>
+<meta name="description" content="Single-wash prices and Unlimited Club monthly plans at Scrub N Spray. Wash as often as you want for one flat monthly price.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* single wash table */
+  .price-table { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .price-row { display: grid; grid-template-columns: 1.4fr 2fr auto; gap: 24px; align-items: center; padding: 24px 30px; border-bottom: 1px solid var(--line); }
+  .price-row:last-child { border-bottom: none; }
+  .price-row:nth-child(even) { background: #fafdff; }
+  .price-row .name { font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--blue-deep); }
+  .price-row .what { color: var(--muted); font-size: 15px; }
+  .price-row .amt { font-family: var(--font-display); font-weight: 800; font-size: 30px; color: var(--blue); white-space: nowrap; }
+  @media (max-width: 680px){ .price-row { grid-template-columns: 1fr auto; } .price-row .what { display: none; } }
+
+  /* club tiers */
+  .tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items: stretch; }
+  .tier { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 38px 32px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+  .tier:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+  .tier.feat { background: var(--grad-deep); color: #fff; border: none; box-shadow: var(--shadow-lg); transform: translateY(-12px); }
+  .tier.feat:hover { transform: translateY(-16px); }
+  .tier h3 { font-size: 26px; }
+  .tier.feat h3 { color: #fff; }
+  .tier .amt { font-family: var(--font-display); font-weight: 800; font-size: 60px; line-height: 1; color: var(--blue); margin: 16px 0 4px; }
+  .tier.feat .amt { color: #fff; }
+  .tier .amt small { font-size: 20px; color: var(--muted); font-weight: 700; }
+  .tier.feat .amt small { color: var(--cyan); }
+  .tier .sub { color: var(--muted); font-size: 15px; margin-bottom: 22px; }
+  .tier.feat .sub { color: #bcd6f2; }
+  .tier ul { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 12px; }
+  .tier li { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 15.5px; }
+  .tier li .tick { width: 20px; height: 20px; flex: none; border-radius: 50%; background: var(--foam); color: var(--blue); display: inline-flex; align-items: center; justify-content: center; }
+  .tier.feat li .tick { background: rgba(255,255,255,.16); color: #fff; }
+  .tier li .tick svg { width: 12px; height: 12px; }
+  .tier .btn { margin-top: auto; justify-content: center; }
+  @media (max-width: 860px){ .tiers { grid-template-columns: 1fr; } .tier.feat { transform: none; } .tier.feat:hover{ transform: translateY(-5px);} }
+</style>
+</head>
+<body data-page="pricing">
+
+<section class="page-hero" data-screen-label="Pricing hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Pricing</span>
+    <h1>Simple, honest<br>wash prices.</h1>
+    <p>Pay per wash, or join the Unlimited Club and wash as often as you want. Sign up at any location.</p>
+  </div>
+</section>
+
+<!-- SINGLE WASH -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Single wash</span>
+      <h2>One-time price per wash.</h2>
+    </div>
+    <div class="price-table" data-reveal>
+      <div class="price-row">
+        <span class="name">Express Wash</span>
+        <span class="what">Exterior tunnel wash, spot-free rinse, powered dry.</span>
+        <span class="amt">$8</span>
+      </div>
+      <div class="price-row">
+        <span class="name">Deluxe Wash</span>
+        <span class="what">Express plus wheel cleaner, tire shine, underbody rinse.</span>
+        <span class="amt">$14</span>
+      </div>
+      <div class="price-row">
+        <span class="name">Premium Wash</span>
+        <span class="what">Deluxe plus ceramic sealant and rain-repellent top coat.</span>
+        <span class="amt">$20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNLIMITED CLUB TIERS -->
+<section class="section foam">
+  <div class="wrap">
+    <div class="section-head" data-reveal style="max-width:680px">
+      <span class="eyebrow">Unlimited Club · monthly</span>
+      <h2>Wash all you want.</h2>
+      <p>One flat monthly price, used at all four Florence locations. Cancel anytime.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier" data-reveal>
+        <h3>Express Unlimited</h3>
+        <div class="amt">$20<small>/mo</small></div>
+        <p class="sub">Unlimited Express washes</p>
+        <ul>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Unlimited Express washes</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Free vacuums every visit</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>All four locations</li>
+        </ul>
+        <a class="btn btn-ghost" href="contact.html">Sign up</a>
+      </div>
+      <div class="tier feat" data-reveal>
+        <span class="badge" style="align-self:flex-start;background:var(--cyan)">Most popular</span>
+        <h3 style="margin-top:14px">Deluxe Unlimited</h3>
+        <div class="amt">$30<small>/mo</small></div>
+        <p class="sub">Unlimited Deluxe washes</p>
+        <ul>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Everything in Express</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Wheel cleaner &amp; tire shine</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Underbody rinse</li>
+        </ul>
+        <a class="btn btn-accent" href="contact.html">Sign up</a>
+      </div>
+      <div class="tier" data-reveal>
+        <h3>Premium Unlimited</h3>
+        <div class="amt">$40<small>/mo</small></div>
+        <p class="sub">Unlimited Premium washes</p>
+        <ul>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Everything in Deluxe</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Ceramic sealant</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Rain-repellent top coat</li>
+        </ul>
+        <a class="btn btn-ghost" href="contact.html">Sign up</a>
+      </div>
+    </div>
+    <p class="mono" data-reveal style="text-align:center;color:var(--muted);font-size:14px;margin-top:30px">Pricing may vary by location. Sign up at any location — online signup coming soon.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta" id="ctaBanner" data-reveal>
+      <h2>Ready to join the club?</h2>
+      <p>Sign up at any Scrub N Spray location, or reach out and we'll help you get started.</p>
+      <div class="hero-cta" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px;position:relative;z-index:2">
+        <a class="btn btn-on-dark btn-lg" href="contact.html">Contact us</a>
+        <a class="btn btn-ghost-dark btn-lg" href="services.html">See all services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="site.js"></script>
+<script>
+  window.addEventListener("load", function(){ var c = document.getElementById("ctaBanner"); if (c) window.spawnBubbles(c, 10); });
+</script>
+</body>
+</html>
