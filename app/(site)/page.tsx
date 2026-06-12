@@ -139,15 +139,17 @@ export default function Home() {
             <p>Open seven days a week. Tap a location for directions.</p>
           </div>
           <div className="loc-grid">
-            {["Location One", "Location Two", "Location Three"].map((name) => (
+            {["Location One", "Location Two", "Location Three", "Location Four"].map((name) => (
               <div className="card loc" data-reveal key={name}>
                 <div className="ph" data-label="storefront photo" />
                 <div className="loc-body">
                   <h3>{name}</h3>
                   <p className="meta">
-                    Florence · Open daily 8am–8pm
+                    Florence
                     <br />
-                    Address coming soon
+                    Open daily 8am–8pm
+                    <br />
+                    Location coming soon
                   </p>
                   <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
                     Get directions <ArrowRight />
