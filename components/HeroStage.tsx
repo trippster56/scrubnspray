@@ -7,7 +7,7 @@ import Bubbles from "./Bubbles";
 type Hero = "a" | "b" | "c";
 
 export default function HeroStage() {
-  const hero: Hero = "c";
+  const hero = "c" as Hero;
 
   return (
     <>
