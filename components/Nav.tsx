@@ -18,7 +18,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav-inner">
         <Link className="nav-logo" href="/" aria-label="Scrub N Spray home">
-          <Image src="/assets/wordmark.png" alt="Scrub N Spray Car Wash" width={180} height={50} priority style={{ height: 50, width: "auto" }} />
+          <Image src="/brand/scrubnspraytext.png" alt="Scrub N Spray Car Wash" width={180} height={50} priority style={{ height: 50, width: "auto" }} />
         </Link>
         <div className="nav-links">
           {NAV.map((n) => (

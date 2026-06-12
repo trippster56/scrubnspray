@@ -407,7 +407,7 @@ ul { margin: 0; }
 .hero-c::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,45,107,.25) 0%, rgba(0,45,107,.15) 40%, rgba(0,28,68,.85) 100%); z-index: 1; }
 .hero-c-inner { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(28px,4vw,48px) 0; }
 .hero-c-top { display: flex; justify-content: space-between; align-items: center; }
-.hero-c-top img { height: 64px; filter: brightness(0) invert(1); }
+.hero-c-emblem { height: 120px; width: auto; filter: drop-shadow(0 8px 24px rgba(0,0,0,.35)); }
 .hero-c h1 { color: #fff; font-size: clamp(48px,8vw,108px); line-height: .92; text-shadow: 0 6px 30px rgba(0,0,0,.35); }
 .hero-c .hero-sub { color: #dbeaff; font-size: clamp(17px,1.8vw,22px); max-width: 560px; margin-top: 18px; font-weight: 600; }
 .hero-c .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <Image src="/assets/wordmark.png" alt="Scrub N Spray" width={200} height={56} style={{ height: 56, width: "auto" }} />
+          <Image src="/brand/scrubnspraytext.png" alt="Scrub N Spray" width={200} height={56} style={{ height: 56, width: "auto" }} />
           <p>
             Four express car washes across Florence. Pull up, pick your wash, and you&rsquo;re back on
             the road in minutes — windows down, free vacuums included.

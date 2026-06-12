@@ -1,29 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Bubbles from "./Bubbles";
 
 type Hero = "a" | "b" | "c";
-const OPTIONS: { k: Hero; title: string }[] = [
-  { k: "a", title: "Splash gradient" },
-  { k: "b", title: "Emblem spotlight" },
-  { k: "c", title: "Full-bleed photo" },
-];
 
 export default function HeroStage() {
-  const [hero, setHero] = useState<Hero>("a");
-
-  useEffect(() => {
-    const saved = (localStorage.getItem("sns-hero") as Hero) || "a";
-    setHero(saved);
-  }, []);
-
-  const choose = (h: Hero) => {
-    setHero(h);
-    localStorage.setItem("sns-hero", h);
-  };
+  const hero: Hero = "c";
 
   return (
     <>
@@ -106,7 +90,7 @@ export default function HeroStage() {
             </div>
             <figure className="hero-b-figure" style={{ margin: 0 }}>
               <Image
-                src="/assets/emblem-banner.png"
+                src="/brand/scrubnsprayainobg.png"
                 alt="Scrub N Spray car wash emblem"
                 width={900}
                 height={600}
@@ -121,11 +105,19 @@ export default function HeroStage() {
           <div className="ph" data-label="car wash tunnel — drop photo" />
           <div className="wrap hero-c-inner">
             <div className="hero-c-top">
-              <Image src="/assets/wordmark.png" alt="Scrub N Spray" width={230} height={64} style={{ height: 64, width: "auto" }} />
               <span className="chip chip-on-dark">
                 <span className="dot" />
                 Open now · 8am–8pm
               </span>
+              <Image
+                className="hero-c-emblem"
+                src="/brand/scrubnsprayainobg.png"
+                alt="Scrub N Spray car wash"
+                width={812}
+                height={768}
+                priority
+                style={{ height: 120, width: "auto" }}
+              />
             </div>
             <div>
               <h1>
@@ -145,21 +137,6 @@ export default function HeroStage() {
             </div>
           </div>
         </section>
-      </div>
-
-      {/* HERO SWITCHER */}
-      <div className="hero-switch">
-        <span className="lbl">Hero style</span>
-        {OPTIONS.map((o) => (
-          <button
-            key={o.k}
-            title={o.title}
-            className={hero === o.k ? "on" : ""}
-            onClick={() => choose(o.k)}
-          >
-            {o.k.toUpperCase()}
-          </button>
-        ))}
       </div>
     </>
   );
